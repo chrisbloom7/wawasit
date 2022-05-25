@@ -4,6 +4,8 @@ require_relative "boot"
 
 require "rails/all"
 
+ENV["SEMANTIC_LOGGER_APP"] ||= "wawasit"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -18,7 +20,10 @@ module Wawasit
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.active_record.schema_format = :sql
+
+    config.time_zone = "UTC"
   end
 end
