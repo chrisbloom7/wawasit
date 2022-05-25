@@ -1,0 +1,88 @@
+---
+inherit_gem:
+  rubocop-github:
+    - config/default_edge.yml
+    - config/rails_edge.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rails
+
+AllCops:
+  CacheRootDirectory: ./tmp
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - '.git/**/*'
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'docs/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+  ExtraDetails: true
+  DefaultFormatter: progress
+  NewCops: enable
+  TargetRubyVersion: 3.1
+
+# Gemspec/RequiredRubyVersion:
+#   Enabled: false
+
+Lint/DuplicateBranch:
+  Enabled: false
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+  Enabled: true
+
+Rails/FilePath:
+  Enabled: true
+  EnforcedStyle: arguments
+
+RSpec/FilePath:
+  CustomTransform:
+    ChatOps: chatops
+    GitHub: github
+  Enabled: true
+
+RSpec/EmptyLineAfterSubject:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/StubbedMock:
+  Enabled: false
+
+RSpec/SubjectStub:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
