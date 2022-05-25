@@ -54,6 +54,7 @@ gem "image_processing", "~> 1.2"
 gem "rails_semantic_logger", "~> 4.6", ">= 4.6.1"
 
 group :development, :test do
+  gem "amazing_print"
   gem "database_cleaner-active_record"
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "factory_bot_rails"
