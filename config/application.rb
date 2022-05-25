@@ -22,7 +22,7 @@ module Wawasit
     #
     # config.eager_load_paths << Rails.root.join("extras")
 
-    config.active_record.schema_format = :sql
+    config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb, yml}")]
 
     config.time_zone = "UTC"
   end

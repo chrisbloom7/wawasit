@@ -25,8 +25,11 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 3.1
 
-# Gemspec/RequiredRubyVersion:
-#   Enabled: false
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+GitHub/RailsControllerRenderPathsExist:
+  Enabled: false
 
 Lint/DuplicateBranch:
   Enabled: false
