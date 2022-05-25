@@ -53,6 +53,8 @@ gem "image_processing", "~> 1.2"
 # Use semantic logging
 gem "rails_semantic_logger", "~> 4.6", ">= 4.6.1"
 
+gem "view_component", "~> 2.55"
+
 group :development, :test do
   gem "amazing_print"
   gem "database_cleaner-active_record"
